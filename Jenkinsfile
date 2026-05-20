@@ -28,7 +28,7 @@ pipeline {
         
         post {
             always {
-            echo 'Build stage completed.'
+            echo 'Build gg stage completed.'
             archiveArtifacts artifacts: '**/*.war', fingerprint: true
             echo ' done bro finally'
             }
