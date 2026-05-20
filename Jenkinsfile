@@ -23,7 +23,7 @@ pipeline {
                 sh 'mvn -s settings.xml -DskipTests install'
             }
 
-        }
+        
         post {
             echo 'Build stage completed.'
             archiveArtifacts artifacts: '**/*war', fingerprint: true
