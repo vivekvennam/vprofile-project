@@ -25,9 +25,13 @@ pipeline {
 
         
         post {
+            always {
             echo 'Build stage completed.'
-            archiveArtifacts artifacts: '**/*war', fingerprint: true
+            archiveArtifacts artifacts: '**/*.war', fingerprint: true
             echo ' done bro finally'
+            }
+        }
+        
         }
     }
     stage('Test') {
